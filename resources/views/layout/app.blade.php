@@ -13,19 +13,31 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
         <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         
     </head>
 
     <body>
         <header class="site_header">
-            <nav>
-                <a href="{{route ('home')}}">Home</a>
-                <a href="{{route ('travels')}}">Travels</a>
-            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{route ('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{route ('travels')}}">Travels</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
         </header>
+
         <main class="content">
             @yield('content')
         </main>
+        
         <footer class="site_footer"></footer>
  
     </body>
